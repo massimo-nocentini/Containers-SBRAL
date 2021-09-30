@@ -1,16 +1,16 @@
 Extension { #name : #SBRALBinaryTree }
 
-{ #category : #'*Collections-Sequenceable-SBRAL-Visualizations' }
+{ #category : #'*Containers-SBRAL-Visualizations' }
 SBRALBinaryTree >> edges [
 	self subclassResponsibility
 ]
 
-{ #category : #'*Collections-Sequenceable-SBRAL-Visualizations' }
+{ #category : #'*Containers-SBRAL-Visualizations' }
 SBRALBinaryTree >> edges: outerEdges [
 	self subclassResponsibility
 ]
 
-{ #category : #'*Collections-Sequenceable-SBRAL-Visualizations' }
+{ #category : #'*Containers-SBRAL-Visualizations' }
 SBRALBinaryTree >> gtInspectorTreeViewUsingCanvas: aCanvas [
 	^ self edges asLinkedList asTree
 		  gtInspectorGraphViewIn: aCanvas

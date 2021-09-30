@@ -1,11 +1,11 @@
 Extension { #name : #SBRALBinaryTreeLeaf }
 
-{ #category : #'*Collections-Sequenceable-SBRAL-Visualizations' }
+{ #category : #'*Containers-SBRAL-Visualizations' }
 SBRALBinaryTreeLeaf >> edges [
 	^ self edges: content -> content ~~> nil
 ]
 
-{ #category : #'*Collections-Sequenceable-SBRAL-Visualizations' }
+{ #category : #'*Containers-SBRAL-Visualizations' }
 SBRALBinaryTreeLeaf >> edges: outerEdges [
 	^ outerEdges
 ]

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'content'
 	],
-	#category : #'Collections-Sequenceable-SBRAL'
+	#category : #'Containers-SBRAL'
 }
 
 { #category : #'as yet unclassified' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #SBRALBinaryTreeLeaf,
 	#superclass : #SBRALBinaryTree,
-	#category : #'Collections-Sequenceable-SBRAL'
+	#category : #'Containers-SBRAL'
 }
 
 { #category : #accessing }

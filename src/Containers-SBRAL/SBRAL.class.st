@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'element'
 	],
-	#category : #'Collections-Sequenceable-SBRAL'
+	#category : #'Containers-SBRAL'
 }
 
 { #category : #API }

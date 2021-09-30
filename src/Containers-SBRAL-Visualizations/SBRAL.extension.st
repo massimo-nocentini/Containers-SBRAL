@@ -1,6 +1,6 @@
 Extension { #name : #SBRAL }
 
-{ #category : #'*Collections-Sequenceable-SBRAL-Visualizations' }
+{ #category : #'*Containers-SBRAL-Visualizations' }
 SBRAL >> gtInspectorTreesInCanvas: aCanvas [
 	| shapes |
 	shapes := representation asLinkedList collect: [ :anAssociation | 

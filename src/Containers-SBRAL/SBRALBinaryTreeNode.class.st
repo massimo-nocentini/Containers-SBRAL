@@ -5,7 +5,7 @@ Class {
 		'left',
 		'right'
 	],
-	#category : #'Collections-Sequenceable-SBRAL'
+	#category : #'Containers-SBRAL'
 }
 
 { #category : #accessing }
