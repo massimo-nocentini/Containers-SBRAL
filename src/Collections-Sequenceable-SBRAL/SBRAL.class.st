@@ -1,14 +1,18 @@
 Class {
 	#name : #SBRAL,
 	#superclass : #SkewBinaryCanonicalNumber,
+	#instVars : [
+		'element'
+	],
 	#category : #'Collections-Sequenceable-SBRAL'
 }
 
 { #category : #API }
 SBRAL >> add: x [
-	^ (SBRALUnaryFunctionIncrement on: self)
-		element: x;
-		value
+
+	element := x.
+
+	^ self increment
 ]
 
 { #category : #API }
@@ -140,9 +144,15 @@ SBRAL >> at: i put: y key: w node: aNode ifAbsent: aBlock [
 						ifAbsent: aBlock) ]
 ]
 
-{ #category : #accessing }
-SBRAL >> decrement [
-	^ (SBRALUnaryFunctionDecrement on: self) value
+{ #category : #'as yet unclassified' }
+SBRAL >> decrementBitZeroOrTwo: anAssociation by: v onto: aRepresentation [
+
+	| sbral |
+	sbral := super
+		         decrementBitZeroOrTwo: anAssociation
+		         by: v
+		         onto: aRepresentation.
+	^ anAssociation value decrementSBRAL: sbral
 ]
 
 { #category : #API }
@@ -154,9 +164,38 @@ SBRAL >> first [
 			assoc value content ]
 ]
 
-{ #category : #accessing }
-SBRAL >> increment [
-	^ self shouldNotImplement
+{ #category : #evaluating }
+SBRAL >> incrementBy: weight onto: aRepresentation two: currentValue inARow: nextValue [
+
+	| sbral |
+	sbral := super
+		         incrementBy: weight
+		         onto: aRepresentation
+		         two: currentValue
+		         inARow: nextValue.
+	^ sbral tree: (SBRALBinaryTree
+			   node: element
+			   left: currentValue value
+			   right: nextValue value)
+]
+
+{ #category : #evaluating }
+SBRAL >> incrementDifferentAdjacentBits [
+
+	^ super incrementDifferentAdjacentBits tree:
+		  (SBRALBinaryTree leaf: element)
+]
+
+{ #category : #evaluating }
+SBRAL >> incrementLastDigit [
+
+	^ super incrementLastDigit tree: (SBRALBinaryTree leaf: element)
+]
+
+{ #category : #evaluating }
+SBRAL >> incrementZero [
+
+	^ super incrementZero tree: (SBRALBinaryTree leaf: element)
 ]
 
 { #category : #accessing }
