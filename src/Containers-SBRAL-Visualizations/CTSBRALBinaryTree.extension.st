@@ -1,17 +1,17 @@
-Extension { #name : #SBRALBinaryTree }
+Extension { #name : #CTSBRALBinaryTree }
 
 { #category : #'*Containers-SBRAL-Visualizations' }
-SBRALBinaryTree >> edges [
+CTSBRALBinaryTree >> edges [
 	self subclassResponsibility
 ]
 
 { #category : #'*Containers-SBRAL-Visualizations' }
-SBRALBinaryTree >> edges: outerEdges [
+CTSBRALBinaryTree >> edges: outerEdges [
 	self subclassResponsibility
 ]
 
 { #category : #'*Containers-SBRAL-Visualizations' }
-SBRALBinaryTree >> gtInspectorTreeViewUsingCanvas: aCanvas [
+CTSBRALBinaryTree >> gtInspectorTreeViewUsingCanvas: aCanvas [
 	^ self edges asLinkedList asTree
 		  gtInspectorGraphViewIn: aCanvas
 		  vertexBlock: [ :aVertex | 

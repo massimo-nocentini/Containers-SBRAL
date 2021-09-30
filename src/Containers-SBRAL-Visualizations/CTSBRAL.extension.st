@@ -1,7 +1,7 @@
-Extension { #name : #SBRAL }
+Extension { #name : #CTSBRAL }
 
 { #category : #'*Containers-SBRAL-Visualizations' }
-SBRAL >> gtInspectorTreesInCanvas: aCanvas [
+CTSBRAL >> gtInspectorTreesInCanvas: aCanvas [
 	| shapes |
 	shapes := representation asLinkedList collect: [ :anAssociation | 
 		          | c |

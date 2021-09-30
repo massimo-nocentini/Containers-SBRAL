@@ -1,6 +1,6 @@
 Class {
-	#name : #SBRALBinaryTreeNode,
-	#superclass : #SBRALBinaryTree,
+	#name : #CTSBRALBinaryTreeNode,
+	#superclass : #CTSBRALBinaryTree,
 	#instVars : [
 		'left',
 		'right'
@@ -9,7 +9,7 @@ Class {
 }
 
 { #category : #accessing }
-SBRALBinaryTreeNode >> at: i key: aKey SBRAL: aSBRAL ifPresent: pBlock ifAbsent: aBlock [
+CTSBRALBinaryTreeNode >> at: i key: aKey SBRAL: aSBRAL ifPresent: pBlock ifAbsent: aBlock [
 	^ aSBRAL
 		at: i
 		key: aKey
@@ -19,7 +19,7 @@ SBRALBinaryTreeNode >> at: i key: aKey SBRAL: aSBRAL ifPresent: pBlock ifAbsent:
 ]
 
 { #category : #'as yet unclassified' }
-SBRALBinaryTreeNode >> at: i put: y key: aKey SBRAL: aSBRAL ifAbsent: aBlock [
+CTSBRALBinaryTreeNode >> at: i put: y key: aKey SBRAL: aSBRAL ifAbsent: aBlock [
 	^ aSBRAL
 		at: i
 		put: y
@@ -29,33 +29,33 @@ SBRALBinaryTreeNode >> at: i put: y key: aKey SBRAL: aSBRAL ifAbsent: aBlock [
 ]
 
 { #category : #'as yet unclassified' }
-SBRALBinaryTreeNode >> decrementSBRAL: aSbral [
+CTSBRALBinaryTreeNode >> decrementSBRAL: aSbral [
 	aSbral tree: left.
 	aSbral cdr tree: right.
 	^ aSbral
 ]
 
 { #category : #accessing }
-SBRALBinaryTreeNode >> left [
+CTSBRALBinaryTreeNode >> left [
 	^ left
 ]
 
 { #category : #accessing }
-SBRALBinaryTreeNode >> left: anObject [
+CTSBRALBinaryTreeNode >> left: anObject [
 	left := anObject
 ]
 
 { #category : #'as yet unclassified' }
-SBRALBinaryTreeNode >> put: y [
+CTSBRALBinaryTreeNode >> put: y [
 	^ self class node: y left: left right: right
 ]
 
 { #category : #accessing }
-SBRALBinaryTreeNode >> right [
+CTSBRALBinaryTreeNode >> right [
 	^ right
 ]
 
 { #category : #accessing }
-SBRALBinaryTreeNode >> right: anObject [
+CTSBRALBinaryTreeNode >> right: anObject [
 	right := anObject
 ]

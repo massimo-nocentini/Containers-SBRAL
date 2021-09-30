@@ -1,12 +1,12 @@
-Extension { #name : #SBRALBinaryTreeNode }
+Extension { #name : #CTSBRALBinaryTreeNode }
 
 { #category : #'*Containers-SBRAL-Visualizations' }
-SBRALBinaryTreeNode >> edges [
+CTSBRALBinaryTreeNode >> edges [
 	^ self edges: nil
 ]
 
 { #category : #'*Containers-SBRAL-Visualizations' }
-SBRALBinaryTreeNode >> edges: outerEdges [
+CTSBRALBinaryTreeNode >> edges: outerEdges [
 	^ left
 		edges:
 			(right
