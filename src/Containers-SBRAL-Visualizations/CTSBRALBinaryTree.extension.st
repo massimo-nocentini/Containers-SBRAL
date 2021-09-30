@@ -32,16 +32,6 @@ CTSBRALBinaryTree >> asShapeTree [
 ]
 
 { #category : #'*Containers-SBRAL-Visualizations' }
-CTSBRALBinaryTree >> edges [
-	self subclassResponsibility
-]
-
-{ #category : #'*Containers-SBRAL-Visualizations' }
-CTSBRALBinaryTree >> edges: outerEdges [
-	self subclassResponsibility
-]
-
-{ #category : #'*Containers-SBRAL-Visualizations' }
 CTSBRALBinaryTree >> shapes: shapes edges: associations [
 
 	| aShape |
