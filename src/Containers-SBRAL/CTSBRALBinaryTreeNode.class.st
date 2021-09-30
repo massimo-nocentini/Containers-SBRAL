@@ -59,3 +59,16 @@ CTSBRALBinaryTreeNode >> right [
 CTSBRALBinaryTreeNode >> right: anObject [
 	right := anObject
 ]
+
+{ #category : #'as yet unclassified' }
+CTSBRALBinaryTreeNode >> shapes: shapes edges: associations [
+
+	super shapes: shapes edges: associations.
+
+	associations
+		add: self -> left;
+		add: self -> right.
+
+	left shapes: shapes edges: associations.
+	right shapes: shapes edges: associations
+]

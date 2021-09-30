@@ -157,11 +157,19 @@ CTSBRAL >> decrementBitZeroOrTwo: anAssociation by: v onto: aRepresentation [
 
 { #category : #API }
 CTSBRAL >> first [
+
 	^ self
-		ifZero: [ CollectionIsEmpty signalWith: self ]
-		ifNotZero: [ | assoc |
-			assoc := representation value.
-			assoc value content ]
+		  ifEmpty: [ CollectionIsEmpty signalWith: self ]
+		  ifNotEmpty: [ 
+			  | assoc |
+			  assoc := representation value.
+			  assoc value content ]
+]
+
+{ #category : #API }
+CTSBRAL >> ifEmpty: eBlock ifNotEmpty: neBlock [
+
+	^ self ifZero: eBlock ifNotZero: neBlock
 ]
 
 { #category : #evaluating }
