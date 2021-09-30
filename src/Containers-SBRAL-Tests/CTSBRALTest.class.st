@@ -8,6 +8,18 @@ Class {
 }
 
 { #category : #tests }
+CTSBRALTest >> testAt [
+
+	| objs sbral |
+	objs := (1 to: 100) shuffled.
+
+	sbral := objs asSBRAL.
+
+	objs withIndexDo: [ :each :i | 
+		self assert: (sbral at: objs size - i + 1) equals: each ]
+]
+
+{ #category : #tests }
 CTSBRALTest >> tree: aCollection [
 
 	^ aCollection asSBRAL

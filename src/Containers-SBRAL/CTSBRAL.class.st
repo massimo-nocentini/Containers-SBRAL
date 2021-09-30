@@ -2,7 +2,7 @@ Class {
 	#name : #CTSBRAL,
 	#superclass : #SkewBinaryCanonicalNumber,
 	#instVars : [
-		'element'
+		'lastAddedObject'
 	],
 	#category : #'Containers-SBRAL'
 }
@@ -10,7 +10,7 @@ Class {
 { #category : #API }
 CTSBRAL >> add: x [
 
-	element := x.
+	lastAddedObject := x.
 
 	^ self increment
 ]
@@ -181,8 +181,9 @@ CTSBRAL >> incrementBy: weight onto: aRepresentation two: currentValue inARow: n
 		         onto: aRepresentation
 		         two: currentValue
 		         inARow: nextValue.
+
 	^ sbral tree: (CTSBRALBinaryTree
-			   node: element
+			   node: lastAddedObject
 			   left: currentValue value
 			   right: nextValue value)
 ]
@@ -191,19 +192,19 @@ CTSBRAL >> incrementBy: weight onto: aRepresentation two: currentValue inARow: n
 CTSBRAL >> incrementDifferentAdjacentBits [
 
 	^ super incrementDifferentAdjacentBits tree:
-		  (CTSBRALBinaryTree leaf: element)
+		  (CTSBRALBinaryTree leaf: lastAddedObject)
 ]
 
 { #category : #evaluating }
 CTSBRAL >> incrementLastDigit [
 
-	^ super incrementLastDigit tree: (CTSBRALBinaryTree leaf: element)
+	^ super incrementLastDigit tree: (CTSBRALBinaryTree leaf: lastAddedObject)
 ]
 
 { #category : #evaluating }
 CTSBRAL >> incrementZero [
 
-	^ super incrementZero tree: (CTSBRALBinaryTree leaf: element)
+	^ super incrementZero tree: (CTSBRALBinaryTree leaf: lastAddedObject)
 ]
 
 { #category : #accessing }
