@@ -9,6 +9,6 @@ CTSlotDescriptorsVisitor >> visitCTSBRAL: aSBRAL [
 		   ifEmpty: [ {  } ]
 		   ifNotEmpty: [ { #first asSlotDescriptor } ])
 	  , { (#asShapeForest asSlotDescriptor
-			   inline: true;
+			   inline;
 			   quote) }
 ]
