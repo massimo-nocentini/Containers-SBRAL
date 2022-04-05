@@ -21,9 +21,7 @@ CTSBRALBinaryTree >> asShapeTree [
 			         edgeFrom: (shapes at: each key)
 			         to: (shapes at: each value) ].
 
-	RSHorizontalGaussianJitterVanDerPloegTreeLayout
-		on: shapes
-		edges: lines.
+	RSHorizontalVanDerPloegTreeLayout on: shapes edges: lines.
 
 	^ RSComposite new
 		  model: self;
