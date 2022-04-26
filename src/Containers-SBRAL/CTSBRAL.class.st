@@ -207,6 +207,12 @@ CTSBRAL >> incrementZero [
 	^ super incrementZero tree: (CTSBRALBinaryTree leaf: lastAddedObject)
 ]
 
+{ #category : #API }
+CTSBRAL >> isEmpty [
+
+	^ self ifEmpty: [ true ] ifNotEmpty: [ false ]
+]
+
 { #category : #accessing }
 CTSBRAL >> key: aValueLink [
 	^ (super key: aValueLink) key
