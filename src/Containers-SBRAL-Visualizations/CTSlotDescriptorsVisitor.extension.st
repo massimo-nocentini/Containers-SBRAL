@@ -4,12 +4,12 @@ Extension { #name : #CTSlotDescriptorsVisitor }
 CTSlotDescriptorsVisitor >> visitCTSBRAL: aSBRAL [
 
 	^ (self visitObject: aSBRAL) , { 
-		  (self newSlotDescriptor
+		  (self newSlotDescriptorSelector
 			   selector: #first;
 			   enablePredicate: [ aSBRAL isEmpty not ];
 			   yourself).
 
-		  (self newSlotDescriptor
+		  (self newSlotDescriptorSelector
 			   selector: #asShapeForest;
 			   inline;
 			   quote) }
