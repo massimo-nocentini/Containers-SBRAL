@@ -1,3 +1,6 @@
+"
+I am a tree with an object and two subtrees, `left` and `right`. The list that I am given decides, from the position and from the number of my objects, in which of the subtrees to go. When the list loses its first object, that is my content, my subtrees become two trees of the list.
+"
 Class {
 	#name : #CTSBRALBinaryTreeNode,
 	#superclass : #CTSBRALBinaryTree,

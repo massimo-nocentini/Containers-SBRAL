@@ -1,3 +1,6 @@
+"
+I am a tree with one object only. The positions after the one of my object are absent from me, and I cannot be decremented.
+"
 Class {
 	#name : #CTSBRALBinaryTreeLeaf,
 	#superclass : #CTSBRALBinaryTree,

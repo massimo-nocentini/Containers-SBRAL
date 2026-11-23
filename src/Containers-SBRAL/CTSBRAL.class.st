@@ -1,3 +1,29 @@
+"
+I am a random access list, built on the numbers of `SkewBinaryCanonicalNumber`: adding an object increments the number, and removing one decrements it.
+
+My inherited `representation` is a chain of links, each with an association from the number of objects to the `CTSBRALBinaryTree` that holds them.
+
+- `add:` answers a list with an object in front of mine.
+- `first` answers the last object added, and `allButFirst` a list without it.
+- `at:` and `at:ifAbsent:` answer the object at a position, where 1 is the position of `first`.
+- `at:put:` answers a list with another object at a position.
+
+The lists that `add:`, `allButFirst` and `at:put:` answer are new ones, and my objects stay as they are.
+
+```smalltalk
+| list other |
+list := #( a b c d e ) asSBRAL.
+list first. ""#e""
+list at: 5. ""#a""
+other := list at: 2 put: #z.
+other at: 2. ""#z""
+list at: 2 ""#d""
+```
+
+`at:` and `at:put:` signal `SubscriptOutOfBounds` when there is no such position. On an empty list, `first` signals `CollectionIsEmpty` and `allButFirst` an `ArithmeticError`.
+
+My instance variable `lastAddedObject` is the last object given to `add:`, kept for the tree that will hold it.
+"
 Class {
 	#name : #CTSBRAL,
 	#superclass : #SkewBinaryCanonicalNumber,

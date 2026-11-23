@@ -1,3 +1,8 @@
+"
+I am the abstract superclass of the trees of a `CTSBRAL`, with an object as their `content`. My class side makes them: `leaf:` a `CTSBRALBinaryTreeLeaf` and `node:left:right:` a `CTSBRALBinaryTreeNode`.
+
+My subclasses say how to find a position, how to put an object there and how to split when the first object of the list goes.
+"
 Class {
 	#name : #CTSBRALBinaryTree,
 	#superclass : #Object,

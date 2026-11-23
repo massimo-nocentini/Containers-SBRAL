@@ -1,3 +1,10 @@
+"
+I am the baseline of `CTSBRAL`. I depend on `ContainersEssentials` and `ContainersBinaryTreeAbstract`, and load three packages:
+
+- `Containers-SBRAL`, the list and its trees.
+- `Containers-SBRAL-Visualizations`, their shapes.
+- `Containers-SBRAL-Tests`, the tests.
+"
 Class {
 	#name : #BaselineOfContainersSBRAL,
 	#superclass : #BaselineOf,
