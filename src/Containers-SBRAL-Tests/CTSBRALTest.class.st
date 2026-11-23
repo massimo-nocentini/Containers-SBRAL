@@ -1,5 +1,5 @@
 "
-A SBRALTest is a test class for testing the behavior of SBRAL
+A `SBRALTest` is a test class for testing the behavior of `SBRAL`
 "
 Class {
 	#name : #CTSBRALTest,
